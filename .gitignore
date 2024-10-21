@@ -1,0 +1,7 @@
+*.log
+**/obj_dir/
+**/*.vcd
+
+cpu.json
+ulx3s_out.config
+ulx3s.bit

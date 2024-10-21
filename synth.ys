@@ -1,0 +1,2 @@
+read_verilog src/top.v
+synth_ecp5 -json cpu.json
