@@ -70,16 +70,13 @@ module bank
 
   input [ADDR_WIDTH-1:0] address,
 
-  input  [7:0] data_in,
-  output [7:0] data_out
+  input      [7:0] data_in,
+  output reg [7:0] data_out
 );
   reg [7:0] storage [0:(1<<ADDR_WIDTH)-1];
-  reg [7:0] value;
 
   always @(posedge clk) begin
     if (store) storage[address] <= data_in;
-    else value <= storage[address];
+    else data_out <= storage[address];
   end
-
-  assign data_out = value;
 endmodule
